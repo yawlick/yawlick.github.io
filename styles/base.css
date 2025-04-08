@@ -1,0 +1,18 @@
+@font-face {
+	font-family: MCFont;
+	src: url('../assets/fonts/minecraft-ru.ttf') format('truetype');
+}
+
+body {
+	margin: 0;
+	font-family: MCFont;
+	background-color: #303030;
+	color: #ffffff;
+}
+
+div {
+	margin: 0;
+	font-family: MCFont;
+	color: white;
+	font-weight: 100;
+}

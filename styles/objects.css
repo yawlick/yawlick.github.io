@@ -1,0 +1,217 @@
+
+/* Containers */
+.background-container {
+	position: fixed;
+	margin: -70px 0 0 0px;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../assets/background.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.container {
+	max-width: 1400px;
+	position: relative;
+	margin: 70px auto;
+	padding: 1px 1.3rem 0.5rem 1.3rem;
+	background-color: #212121;
+	border-radius: 15px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	z-index: -0;
+}
+
+.fake-flex-container {
+    gap: 1rem;
+	margin: 10px 10px;
+	max-width: 1400px;
+	position: relative;
+	padding: 1px 1rem 1rem 1rem;
+	background-color: #2f2f2f;
+	border-radius: 15px;
+	box-sizing: border-box;
+	z-index: -0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem 4rem;
+	margin: 0px 10px;
+	max-width: 1400px;
+	position: relative;
+	padding: 1px 0rem 0rem 1rem;
+	background-color: #333333;
+	border-radius: 15px;
+	box-sizing: border-box;
+	z-index: -0;
+}
+/* --- */
+
+/* Location Box */
+.locationbox {
+    width: 300px;
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.locationbox-image {
+    position: relative;
+    left: -11px;
+    top: -8px;
+    width: 322px;
+    height: 156px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 0rem;
+    border-bottom: 2px solid #444444;
+}
+
+.locationbox-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.locationbox-param {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.locationbox-param .label {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+/* --- */
+
+/* Item Box */
+.itembox {
+    position: relative;
+    width: 350px;
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.itembox-texture {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 64px;
+    height: 64px;
+    z-index: 10;
+    border: 1px solid #666;
+    background-color: #1e1e1e;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.itembox-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #444444;
+    padding-bottom: 0.5rem;
+}
+
+.itembox-param {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.itembox-param .label {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+/* --- */
+
+/* Pet Box */
+.petbox {
+    width: 300px;
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.petbox-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #444444;
+    padding-bottom: 0.5rem;
+}
+
+.petbox-param {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.petbox-param .label {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+/* --- */
+
+/* Mob Box */
+.mobbox {
+    width: 300px;
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mobbox-texture {
+    position: absolute;
+    top: 4px;
+    left: 300px;
+    height: 146px;
+    z-index: 10;
+    border: 1px solid #666;
+    background-color: #1e1e1e;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.mobbox-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #444444;
+    padding-bottom: 0.5rem;
+}
+
+.mobbox-param {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.mobbox-param .label {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+/* --- */
