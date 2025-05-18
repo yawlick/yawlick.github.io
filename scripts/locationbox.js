@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const description = data?.description ? "<span style='color: #474747;'>" + data.description + "</span>" : unknown;
     const rebirth = data?.rebirth ? "<span style='color: #4a8cec;'>" + data.rebirth + "</span>" : unknown;
     const price = data?.price ? "<span style='color: #4a8cec;'>" + data.price + "</span>" : unknown;
-    const rarity = Rarity.OTHER; // Здесь можно добавить логику определения редкости по ID, если нужно
+    const rarity = Rarity.OTHER;
 
     box.innerHTML = "";
     box.style.border = "1px solid " + rarity.getHex();
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const nameElement = document.createElement("div");
     nameElement.className = "locationbox-title";
-    nameElement.textContent = name;
+    nameElement.innerHTML = name;
     nameElement.style.color = rarity.getHex();
     box.appendChild(nameElement);
 
