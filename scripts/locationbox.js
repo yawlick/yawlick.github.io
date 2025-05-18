@@ -1,20 +1,23 @@
+import { LOCATIONS } from './handler/locations.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const locationBoxes = document.querySelectorAll(".locationbox");
 
   locationBoxes.forEach(box => {
     const unknown = "<span style='color: #F25050;'>???</span>";
-    const name = box.getAttribute("name") || unknown;
-    const id = box.getAttribute("id") ? box.getAttribute("id") : 0;
-    const description = box.getAttribute("description") ? "<span style='color: #474747;'>" + box.getAttribute("description") + "</span>" : unknown;
-    const rebirth = box.getAttribute("rebirth") ? "<span style='color: #4a8cec;'>" + box.getAttribute("rebirth") + "</span>" : unknown;
-    const price = box.getAttribute("price") ? "<span style='color: #4a8cec;'>" + box.getAttribute("price") + "</span>" : unknown;
-    const rarity = Rarity.OTHER;
+    const id = box.getAttribute("id") ? box.getAttribute("id") : "0";
+    const data = LOCATIONS[id];
+
+    const name = data?.name || unknown;
+    const description = data?.description ? "<span style='color: #474747;'>" + data.description + "</span>" : unknown;
+    const rebirth = data?.rebirth ? "<span style='color: #4a8cec;'>" + data.rebirth + "</span>" : unknown;
+    const price = data?.price ? "<span style='color: #4a8cec;'>" + data.price + "</span>" : unknown;
+    const rarity = Rarity.OTHER; // Здесь можно добавить логику определения редкости по ID, если нужно
 
     box.innerHTML = "";
     box.style.border = "1px solid " + rarity.getHex();
     box.style.cursor = "pointer";
     box.addEventListener("click", () => {
-      const name = box.getAttribute("name") || "default";
       const url = "../../../../../pages/loc/" + id + ".html";
       window.location.href = url;
     });
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     priceElement.style.color = "white";
     priceElement.innerHTML = "Стоимость: " + price + " <img src='../../../../../assets/textures/icons/coin.png' class='icon' width='14'></img>";
     box.appendChild(priceElement);
-    
+
     const descriptionElement = document.createElement("div");
     descriptionElement.className = "locationbox-param";
     descriptionElement.style.color = "white";
