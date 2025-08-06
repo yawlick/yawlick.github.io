@@ -49,7 +49,7 @@ export const LOCATIONS = {
   },
   9: {
     name: "#9. Волшебная Шахта",
-    price: "______",
+    price: "6.3Dc",
     rebirth: "Ультра-боец",
     description: "(#9 / локация)"
   },
@@ -74,79 +74,79 @@ export const LOCATIONS = {
   13: {
     name: "#13. Заброшенная Тюрьма",
     price: "450Qad",
-    rebirth: "______",
+    rebirth: "Верховный",
     description: "(#13 / локация)"
   },
   14: {
     name: "#14. Оазис",
     price: "225QiD",
-    rebirth: "______",
+    rebirth: "Авантюрист",
     description: "(#14 / локация)"
   },
   15: {
     name: "#15. Каньон",
     price: "831Sxd",
-    rebirth: "______",
+    rebirth: "Вершина",
     description: "(#15 / локация)"
   },
   16: {
     name: "#16. Луга с Обелисками",
     price: "281Spd",
-    rebirth: "______",
+    rebirth: "Единственный",
     description: "(#16 / локация)"
   },
   17: {
     name: "#17. Подводный Храм",
     price: "9.5Nod",
-    rebirth: "______",
+    rebirth: "Небесный",
     description: "(#17 / локация)"
   },
   18: {
     name: "#18. Порт",
     price: "30.8Vg",
-    rebirth: "______",
+    rebirth: "Охотник",
     description: "(#18 / локация)"
   },
   19: {
     name: "#19. Пылающая Бездна",
     price: "28.7Uvg",
-    rebirth: "______",
+    rebirth: "Магистр",
     description: "(#19 / локация)"
   },
   20: {
     name: "#20. Морской Замок",
     price: "316Dvg",
-    rebirth: "______",
+    rebirth: "Царь",
     description: "(#20 / локация)"
   },
   21: {
     name: "#21. Тайпинская Башня",
     price: "1Qavg",
-    rebirth: "______",
+    rebirth: "Паладин",
     description: "(#21 / локация)"
   },
   22: {
     name: "#22. Грибной Мир",
     price: "3.22Qivg",
-    rebirth: "______",
+    rebirth: "Потусторонний",
     description: "(#22 / локация)"
   },
   23: {
     name: "#23. Палисад",
     price: "10.4Sxvg",
-    rebirth: "______",
+    rebirth: "Серафический",
     description: "(#23 / локация)"
   },
   24: {
     name: "#24. Деревня Роботов",
     price: "33.2Spvg",
-    rebirth: "______",
+    rebirth: "Инфернальный",
     description: "(#24 / локация)"
   },
   25: {
     name: "#25. Космодрайвер",
     price: "106Ocvg",
-    rebirth: "______",
+    rebirth: "Адепт",
     description: "(#25 / локация)"
   }
 };

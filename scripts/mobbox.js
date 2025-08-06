@@ -1,14 +1,42 @@
+import { MOBS } from './handler/mobs.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const mobBoxes = document.querySelectorAll(".mobbox");
 
   mobBoxes.forEach(box => {
     const unknown = "<span style='color: #F25050;'>???</span>";
-    const name = box.getAttribute("name") || unknown;
-    const health = box.getAttribute("health") ? "<span style='color: #4a8cec;'>" + box.getAttribute("health") + "</span>" : unknown;
-    const dropsmoney = box.getAttribute("dropsmoney") ? "<span style='color: #4a8cec;'>" + box.getAttribute("dropsmoney") + "</span>" : unknown;
-    const event = box.getAttribute("event") ? "<span style='color: #4a8cec;'>" + box.getAttribute("event") + "</span>" : unknown;
-    const description = box.getAttribute("description") ? "<span style='color: #474747;'>" + box.getAttribute("description") + "</span>" : unknown;
-    const rarity = Rarity.OTHER;
+    var id = null;
+    if(box.getAttribute("name")) {
+      id = box.getAttribute("name").toUpperCase()
+    } else if(box.getAttribute("id")) {
+     id = box.getAttribute("id").toUpperCase()
+    }
+
+    var name = null;
+    var event = null;
+    var health = null;
+    var dropsMoney = null;
+    var description = null;
+    var rarity = null;
+
+    if(MOBS[id]) {
+      console.log(id)
+      const data = MOBS[id]
+
+      name = data.name || unknown;
+      health = data.health ? "<span style='color: #4a8cec;'>" + data.health + "</span>" : unknown;
+      dropsMoney = data.dropsMoney ? "<span style='color: #4a8cec;'>" + data.dropsMoney + "</span>" : unknown;
+      event = data.event ? "<span style='color: #4a8cec;'>" + data.event + "</span>" : unknown;
+      description = data.description ? "<span style='color: #474747;'>" + data.description + "</span>" : unknown;
+      rarity = Rarity.OTHER;
+    } else {
+      name = box.getAttribute("name") || unknown;
+      health = box.getAttribute("health") ? "<span style='color: #4a8cec;'>" + box.getAttribute("health") + "</span>" : unknown;
+      dropsMoney = box.getAttribute("dropsmoney") ? "<span style='color: #4a8cec;'>" + box.getAttribute("dropsmoney") + "</span>" : unknown;
+      event = box.getAttribute("event") ? "<span style='color: #4a8cec;'>" + box.getAttribute("event") + "</span>" : unknown;
+      description = box.getAttribute("description") ? "<span style='color: #474747;'>" + box.getAttribute("description") + "</span>" : unknown;
+      rarity = Rarity.OTHER;
+    }
 
     box.innerHTML = "";
     box.style.border = "1px solid " + rarity.getHex();
@@ -40,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropsmoneyElement = document.createElement("div");
     dropsmoneyElement.className = "mobbox-param";
     dropsmoneyElement.style.color = "white";
-    dropsmoneyElement.innerHTML = "Дроп денег: " + dropsmoney + " <img src='../../../../../assets/textures/icons/coin.png' class='icon' width='14'></img>";
+    dropsmoneyElement.innerHTML = "Дроп денег: " + dropsMoney + " <img src='../../../../../assets/textures/icons/coin.png' class='icon' width='14'></img>";
     box.appendChild(dropsmoneyElement);
 
     const descriptionElement = document.createElement("div");
