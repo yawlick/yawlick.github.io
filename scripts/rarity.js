@@ -83,6 +83,36 @@ const Rarity = {
         return this.name;
       },
     },
+    "ВСЕГДА": {
+      name: "Всегда",
+      hexColor: "#e7e7e7ff",
+      getHex: function() {
+        return this.hexColor;
+      },
+      getName: function() {
+        return this.name;
+      },
+    },
+    "ТЬМА": {
+      name: "Тьма",
+      hexColor: "#6b6b6bff",
+      getHex: function() {
+        return this.hexColor;
+      },
+      getName: function() {
+        return this.name;
+      },
+    },
+    "КРОВАВАЯ ЛУНА": {
+      name: "Кровавая луна",
+      hexColor: "#ae2222ff",
+      getHex: function() {
+        return this.hexColor;
+      },
+      getName: function() {
+        return this.name;
+      },
+    },
   };
 
 document.querySelectorAll(".container").forEach(box => {
