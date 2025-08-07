@@ -13,13 +13,13 @@ export const LOCATIONS = {
   },
   3: {
     name: "#3. Шиноби",
-    price: "______",
+    price: "7B",
     rebirth: "Легенда",
     description: "(#3 / локация)"
   },
   4: {
     name: "#4. Полярная Тундра",
-    price: "______",
+    price: "180T",
     rebirth: "Убийца",
     description: "(#4 / локация)"
   },
@@ -31,19 +31,19 @@ export const LOCATIONS = {
   },
   6: {
     name: "#6. Ад",
-    price: "______",
+    price: "125Sx",
     rebirth: "Защитник",
     description: "(#6 / локация)"
   },
   7: {
     name: "#7. Древние Пески",
-    price: "______",
+    price: "420Sp",
     rebirth: "Ангел",
     description: "(#7 / локация)"
   },
   8: {
     name: "#8. Зачарованный Лес",
-    price: "______",
+    price: "1.49No",
     rebirth: "Разрушитель",
     description: "(#8 / локация)"
   },
@@ -55,13 +55,13 @@ export const LOCATIONS = {
   },
   10: {
     name: "#10. Секретная Земля",
-    price: "______",
+    price: "14.9Ud",
     rebirth: "Всемогущий",
     description: "(#10 / локация)"
   },
   11: {
     name: "#11. Контейнерный Пункт",
-    price: "______",
+    price: "29.7Dd",
     rebirth: "Герой B",
     description: "(#11 / локация)"
   },

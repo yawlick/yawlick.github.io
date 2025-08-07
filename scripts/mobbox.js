@@ -1,10 +1,27 @@
 import { MOBS } from './handler/mobs.js';
 
+function open(fakeFlexContainer, flexContainer, toggle) {
+  fakeFlexContainer.style.padding = "1px 1rem 1rem 1rem"
+  toggle.textContent = "(свернуть)"
+  toggle.innerHTML = "<u>" + toggle.textContent + "</u>" 
+
+  flexContainer.style.opacity = "1";
+  flexContainer.style.overflow = "hidden";
+  flexContainer.style.display = "flex"
+}
+
+function close(fakeFlexContainer, flexContainer, toggle) {
+  fakeFlexContainer.style.padding = "1px 1rem 0.1rem 1rem"
+  flexContainer.style.display = "none"
+  toggle.textContent = "(развернуть)"
+  toggle.innerHTML = "<u>" + toggle.textContent + "</u>" 
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const mobBoxes = document.querySelectorAll(".mobbox");
 
   mobBoxes.forEach(box => {
-    const unknown = "<span style='color: #F25050;'>???</span>";
+    const unknown = "<span style='color: #f25050;'>???</span>";
     var id = null;
     if(box.getAttribute("name")) {
       id = box.getAttribute("name").toUpperCase()
@@ -20,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var rarity = null;
 
     if(MOBS[id]) {
-      console.log(id)
       const data = MOBS[id]
 
       name = data.name || unknown;
@@ -28,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dropsMoney = data.dropsMoney ? "<span style='color: #4a8cec;'>" + data.dropsMoney + "</span>" : unknown;
       event = data.event ? "<span style='color: #4a8cec;'>" + data.event + "</span>" : unknown;
       description = data.description ? "<span style='color: #474747;'>" + data.description + "</span>" : unknown;
-      rarity = Rarity.OTHER;
+      rarity = Rarity[data.event.toUpperCase()] ? Rarity[data.event.toUpperCase()] : Rarity.OTHER
     } else {
       name = box.getAttribute("name") || unknown;
       health = box.getAttribute("health") ? "<span style='color: #4a8cec;'>" + box.getAttribute("health") + "</span>" : unknown;
@@ -83,14 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".toggle-drop");
 
   toggles.forEach(toggle => {
+    toggle.innerHTML = "<u>" + toggle.textContent + "</u>" 
     toggle.addEventListener("click", () => {
       const fakeFlexContainer = toggle.closest(".fake-flex-container");
       const flexContainer = fakeFlexContainer.querySelector(".flex-container");
       const isVisible = flexContainer.style.display !== "none";
 
-      fakeFlexContainer.style.padding = isVisible ? "1px 1rem 0.1rem 1rem" : "1px 1rem 1rem 1rem"
-      flexContainer.style.display = isVisible ? "none" : "flex";
-      toggle.textContent = isVisible ? "(развернуть)" : "(свернуть)";
+      if(isVisible) {
+        close(fakeFlexContainer, flexContainer, toggle)
+      } else {
+        open(fakeFlexContainer, flexContainer, toggle)
+      }
     });
   });
 });

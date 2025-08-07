@@ -85,7 +85,7 @@ const Rarity = {
     },
     "ВСЕГДА": {
       name: "Всегда",
-      hexColor: "#e7e7e7ff",
+      hexColor: "#22AE49",
       getHex: function() {
         return this.hexColor;
       },
